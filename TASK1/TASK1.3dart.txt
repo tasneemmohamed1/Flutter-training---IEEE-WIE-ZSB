@@ -1,0 +1,8 @@
+import 'dart:io';
+void main(){
+  Map<String,String> peopleBirthdays = {"Albert Einstein":"14-03-1879", "Benjamin Franklin":"17-01-1706","Ada Lovlace":"10-12-1815"};
+  print('Welcome to the birthday dictionary. We know the birthday of: \n Albert Einstein , Benjamin Franklin and Ada Lovlace ' );
+  stdout.write('The birthday of whom you want to know?');
+  String name = stdin.readLineSync()!;
+  print(' The birthday of $name  is ${peopleBirthdays[name]} ');
+}

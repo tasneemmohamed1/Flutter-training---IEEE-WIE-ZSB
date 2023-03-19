@@ -1,0 +1,14 @@
+import 'dart:io';
+void main() {
+  stdout.write(" Enter any word:\n ");
+  String input = stdin.readLineSync()!.toLowerCase();
+  String reverseInput = input
+      .split('')
+      .reversed
+      .join('');
+  if (input == reverseInput) {
+    print("The word you entered is palindrome");
+  } else {
+    print("The word you entered is not a palindrome");
+  }
+}
