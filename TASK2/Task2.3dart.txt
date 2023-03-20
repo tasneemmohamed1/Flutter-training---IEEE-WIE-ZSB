@@ -1,0 +1,28 @@
+void main() {
+  final random = Random();
+  int randNumber = random.nextInt(100);
+  int attempt = 0;
+
+  while (true) {
+    attempt += 1;
+    stdout.write("Put a num between 0 and 100: ");
+    String chosenNumber = stdin.readLineSync()!;
+
+
+    if (int.parse(chosenNumber) > 100) {
+      print("Please do not go over 100");
+      continue;
+    }
+
+    if (int.parse(chosenNumber) == randNumber) {
+      print("Bingo! You tried $attempt times\n");
+      continue;
+    } else if (int.parse(chosenNumber) > randNumber) {
+      print("You are higher");
+      continue;
+    } else {
+      print("You are lower");
+      continue;
+    }
+  }
+}
